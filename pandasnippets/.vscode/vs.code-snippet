@@ -1,0 +1,45 @@
+{
+    "Basic React Console":{
+        "prefix":"<csl",
+        "body":"console.log(\"$1\");",
+        "description":"Creates console.log"
+    },"Basic React Alert":{
+        "prefix":"!art",
+        "body":"alert(\"$1\");",
+        "description":"Creates console.log"
+    },
+    "Basic React Class":{
+        "prefix":"<class",
+        "body":[
+            "class $1 extends Component {",
+                "constructor(props) {",
+                  "super(props);",
+                  "this.state = {}",
+                  "}",
+                  "$0",
+                  "render() {",
+                    "const {  } = this.props;",
+                    "const {  } = this.state;",
+                    "return (",
+                    "$0",
+                    ");",
+                    "}",
+                    "}",
+                    "export default $1;"
+        ],        "description":"Creates react class"
+
+    },
+    "Basic React Function":{
+        "prefix":"<funcomp",
+        "body":[
+            "const $1 = ({$1}) => {",
+              "return (",
+              "$0",
+              ");",
+              "};",
+              "export default $1;"  
+              
+        ],        "description":"Creates react class"
+
+    }
+}

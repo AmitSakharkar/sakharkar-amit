@@ -1,0 +1,24 @@
+{
+    "name": "motapandasnippets",
+    "displayName": "motapandasnippets",
+    "description": "Basic React snippet",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "javascriptreact",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

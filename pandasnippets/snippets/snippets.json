@@ -1,0 +1,69 @@
+{
+    "Basic React Console":{
+        "prefix":"<log",
+        "body":"console.log(${1})",
+        "description":"Creates console.log"
+    },"Basic React Alert":{
+        "prefix":"<alt",
+        "body":"alert(${1});",
+        "description":"Creates alert"
+    },
+    "Basic React Class":{
+        "prefix":"<class",
+        "body":[
+            "class ${1:${YourClassName}} extends Component {",
+            "\tconstructor(props) {",
+            "\t\tsuper(props);",
+            "\t\tthis.state = {$2}",
+            "\t}",
+            "",
+            "\trender() {",
+            "\tconst { $3 } = this.props;",
+            "\tconst { $4 } = this.state;",
+            "\t\treturn (",
+            "\t\t\t$5",
+            "\t\t);",
+            "\t}",
+            "}",
+            "export default ${1:${YourClassName}};"
+        ],        
+        "description":"Creates react class component"
+    },
+    "Basic React Function":{
+        "prefix":"<funcomp",
+        "body":[
+            "const ${1:${FunctionName}} = ({${2}}) => {",
+            "\treturn (",
+            "\t\t$3",
+            "\t);",
+            "};",
+            "export default ${1:${FunctionName}};"  
+        ],        
+        "description":"Creates react functional component"
+    },
+    "Function":{
+        "prefix":"<func",
+        "body":[
+            "${1:FunctionName}() {",
+            "\t$2",
+            "}"
+        ],
+        "description":"Creates function"
+    },
+    "Array Function":{
+        "prefix":"<arrfunc",
+        "body":[
+            "${1:FunctionName} = () => {",
+            "\t$2",
+            "};"
+        ],
+        "description":"Creates Array Function"
+    },
+    "Set State":{
+        "prefix": "<sets",
+        "body":[
+            "this.setState({$1});"
+        ],
+        "description": "Creates setState function"
+    }
+}
